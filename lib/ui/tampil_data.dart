@@ -15,15 +15,25 @@ class TampilData extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final int umur = DateTime.now().year - tahun;
+
     return Scaffold(
       appBar: AppBar(
         title: const Text("Perkenalan"),
+        foregroundColor: Colors.white,
+        backgroundColor: Colors.teal[700],
+        elevation: 0,
       ),
       body: Container(
-        margin: const EdgeInsets.all(10),
+        margin: const EdgeInsets.all(20),
         child: Column(
           children: [
-            Text("Nama saya $nama, NIM $nim, dan umur saya adalah $umur tahun"),
+            Text(
+              "Halo, nama saya $nama, NIM $nim, umur saya $umur tahun.",
+              style: const TextStyle(
+                fontSize: 20,
+                color: Colors.teal,
+              ),
+            ),
           ],
         ),
       ),
