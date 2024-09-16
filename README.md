@@ -61,6 +61,5 @@ return Scaffold(
 ```
 
 ## Screenshot
-Contoh :
 ![Lampiran Form](form.png)
 ![Lampiran Hasil](hasil.png)
