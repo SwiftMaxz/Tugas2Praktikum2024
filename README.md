@@ -4,7 +4,7 @@ Proses Passing Data dari Form Menuju Tampilan
 
 Di dalam aplikasi ini, terdapat form input (`FormData`) yang berfungsi untuk mengumpulkan data dari pengguna. Form ini terdiri dari beberapa `TextField` yang digunakan untuk menerima input data seperti `nama`, `NIM`, dan `tahun lahir`. Setelah pengguna memasukkan data ke dalam form, data tersebut akan diproses dan dikirim ke halaman tampilan menggunakan `Navigator`.
 
-`TextEditingController` digunakan untuk mengelola dan mendapatkan nilai input dari setiap TextField.
+`TextEditingController` digunakan untuk mengelola dan mendapatkan nilai input dari setiap `TextField`.
 
 Setiap TextField memiliki controller yang terhubung:
 ```
@@ -18,7 +18,7 @@ String nama = _namaController.text;
 String nim = _nimController.text;
 int tahun = int.parse(_tahunController.text);
 ```
-Setelah pengguna mengisi form dan menekan tombol Simpan, data yang diinput akan dikirimkan ke halaman TampilData menggunakan fungsi Navigator.push.
+Setelah pengguna mengisi form dan menekan tombol Simpan, data yang diinput akan dikirimkan ke halaman `TampilData` menggunakan fungsi `Navigator.push`.
 
 Proses ini melibatkan penggunaan Route untuk berpindah dari satu halaman ke halaman lain dengan membawa data:
 ```
@@ -45,7 +45,7 @@ class TampilData extends StatelessWidget {
     required this.tahun,
   }) : super(key: key);
 ```
-Data tersebut kemudian diolah (misalnya, menghitung umur berdasarkan tahun lahir) dan ditampilkan dalam `Text` widget:
+Data tersebut kemudian diolah dan ditampilkan dalam `Text` widget:
 ```
 final int umur = DateTime.now().year - tahun;
 
